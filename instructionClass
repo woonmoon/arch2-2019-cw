@@ -1,0 +1,33 @@
+class rTypeInstruction{
+public:
+	rTypeInstruction(int32_t binaries);
+private:
+  int opcode; //000000 00000 00000 00000 00000 000000
+  int source1;
+  int source2;
+  int destination;
+  int shift;
+  int function;
+};
+
+// rTypeInstruction::rTypeInstruction(int32_t binaries) {
+// 	source1=extract_bit32()
+// }
+
+class iTypeInstruction{
+public:
+	iTypeInstruction(int32_t binaries);
+private:
+  int opcode; //000000 00000 00000 0000000000000000
+  int source;
+  int destination;
+  int immediateConstant;
+};
+
+class jTypeInstruction{
+public:
+	jTypeInstruction(int32_t binaries);
+private:
+  int opcode; //000000 00000000000000000000000000
+  int memloc;
+};
